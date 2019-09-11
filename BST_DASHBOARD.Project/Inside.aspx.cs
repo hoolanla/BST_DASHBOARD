@@ -15,7 +15,7 @@ namespace BST_DASHBOARD.Project
         {
 
 
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
 
             if (Session["Admin"] == null)
             {
@@ -44,11 +44,11 @@ namespace BST_DASHBOARD.Project
 
         private void initData()
         {
-
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
             MODEL.Criteria criteria = new MODEL.Criteria();
             BLL.Data _BLL = new BLL.Data();
 
-            criteria.dateFrom = DateTime.Parse( RadDateTimePicker1.SelectedDate.ToString()).ToString("dd/MM/yyyy HH:mm:ss ");
+          criteria.dateFrom = DateTime.Parse( RadDateTimePicker1.SelectedDate.ToString()).ToString("dd/MM/yyyy HH:mm:ss ");
             criteria.dateTo = DateTime.Parse( RadDateTimePicker2.SelectedDate.ToString()).ToString("dd/MM/yyyy HH:mm:ss ");
             Session["DATETO"] = criteria.dateTo;
             Session["DATEFROM"] = criteria.dateFrom;

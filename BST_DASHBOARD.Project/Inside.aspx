@@ -3,15 +3,7 @@
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
- 
 
-
-  <!-- include your less or built css files  -->
-  <!-- 
-  bootstrap-datetimepicker-build.less will pull in "../bootstrap/variables.less" and "bootstrap-datetimepicker.less";
-  or
-  <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.css" />
-  -->
 
 
 <div class="container">
@@ -49,35 +41,16 @@
         </div>
 
         <div class='col-sm-2'>
-            <div class="form-group">
-                <telerik:RadDateTimePicker ID="RadDateTimePicker1" runat="server" AllowPaging="True" AllowFilteringByColumn="False" AllowSorting="True" Culture="en-US">
-<TimeView CellSpacing="-1" Culture="th-TH"></TimeView>
-
-<TimePopupButton ImageUrl="" HoverImageUrl=""></TimePopupButton>
-
-<Calendar UseRowHeadersAsSelectors="False" UseColumnHeadersAsSelectors="False" EnableWeekends="True" FastNavigationNextText="&amp;lt;&amp;lt;"></Calendar>
-
-<DateInput DisplayDateFormat="dd/MM/yyyy  HH:mm:ss" DateFormat="dd/MM/yyyy HH:mm:ss" LabelWidth="40%">
-<EmptyMessageStyle Resize="None"></EmptyMessageStyle>
-
-<ReadOnlyStyle Resize="None"></ReadOnlyStyle>
-
-<FocusedStyle Resize="None"></FocusedStyle>
-
-<DisabledStyle Resize="None"></DisabledStyle>
-
-<InvalidStyle Resize="None"></InvalidStyle>
-
-<HoveredStyle Resize="None"></HoveredStyle>
-
-<EnabledStyle Resize="None"></EnabledStyle>
-</DateInput>
-
-<DatePopupButton ImageUrl="" HoverImageUrl=""></DatePopupButton>
-                </telerik:RadDateTimePicker>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="RadDateTimePicker1" runat="server" ErrorMessage="โปรดกรอกข้อมูล" ForeColor="Red"></asp:RequiredFieldValidator>
+      
+      <div class="form-group">
+                <telerik:RadDateTimePicker ID="RadDateTimePicker1" runat="server" AllowPaging="True" AllowFilteringByColumn="False" AllowSorting="True" DateInput-DisplayDateFormat="dd/MM/yyyy HH:mm" TimeView-Interval="00:10:00"></telerik:RadDateTimePicker>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" ControlToValidate="RadDateTimePicker1" 
+                    runat="server" ErrorMessage="โปรดกรอกข้อมูล"></asp:RequiredFieldValidator>
             </div>
-        </div>
+        
+       
+            </div>
+     
 
               
                <div class='col-sm-1'>
@@ -88,33 +61,15 @@
 
         <div class='col-sm-2'>
             <div class="form-group">
-                <telerik:RadDateTimePicker ID="RadDateTimePicker2" runat="server" DateInput-DisplayDateFormat="dd/MM/yyyy HH:mm:ss" Culture="en-US">
-<TimeView CellSpacing="-1" Culture="th-TH"></TimeView>
-
-<TimePopupButton ImageUrl="" HoverImageUrl=""></TimePopupButton>
-
-<Calendar UseRowHeadersAsSelectors="False" UseColumnHeadersAsSelectors="False" EnableWeekends="True" FastNavigationNextText="&amp;lt;&amp;lt;"></Calendar>
-
-<DateInput DisplayDateFormat="dd/MM/yyyy HH:mm:ss" DateFormat="dd/MM/yyyy HH:mm:ss" LabelWidth="40%">
-<EmptyMessageStyle Resize="None"></EmptyMessageStyle>
-
-<ReadOnlyStyle Resize="None"></ReadOnlyStyle>
-
-<FocusedStyle Resize="None"></FocusedStyle>
-
-<DisabledStyle Resize="None"></DisabledStyle>
-
-<InvalidStyle Resize="None"></InvalidStyle>
-
-<HoveredStyle Resize="None"></HoveredStyle>
-
-<EnabledStyle Resize="None"></EnabledStyle>
-</DateInput>
-
-<DatePopupButton ImageUrl="" HoverImageUrl=""></DatePopupButton>
-                </telerik:RadDateTimePicker>
-                   <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="RadDateTimePicker2" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator1" Operator="GreaterThan" ControlToValidate="RadDateTimePicker2" ControlToCompare="RadDatetimePicker1" ErrorMessage="EndDate ต้องมากกว่า StartDate" ForeColor="Red" runat="server"></asp:CompareValidator>
+             
+                    <div class="form-group">
+                <telerik:RadDateTimePicker ID="RadDateTimePicker2" runat="server" AllowPaging="True" AllowFilteringByColumn="False" AllowSorting="True" DateInput-DisplayDateFormat="dd/MM/yyyy HH:mm" TimeView-Interval="00:10:00"></telerik:RadDateTimePicker>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" ControlToValidate="RadDateTimePicker2" 
+                    runat="server" ErrorMessage="โปรดกรอกข้อมูล"></asp:RequiredFieldValidator>
+            </div>
+                
+                
+              <asp:CompareValidator ID="CompareValidator1" Operator="GreaterThan" ControlToValidate="RadDateTimePicker2" ControlToCompare="RadDatetimePicker1" ErrorMessage="EndDate ต้องมากกว่า StartDate" ForeColor="Red" runat="server"></asp:CompareValidator>
             </div>
         </div>
                           <div class='col-sm-1'>

@@ -6,14 +6,7 @@
  
 
 
-  <!-- include your less or built css files  -->
-  <!-- 
-  bootstrap-datetimepicker-build.less will pull in "../bootstrap/variables.less" and "bootstrap-datetimepicker.less";
-  or
-  <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.css" />
-  -->
-
-
+ 
 <div class="container">
 
         <div class="row">
@@ -51,7 +44,7 @@
 
         <div class='col-sm-2'>
             <div class="form-group">
-                <telerik:RadDateTimePicker ID="RadDateTimePicker1" runat="server" AllowPaging="True" AllowFilteringByColumn="False" AllowSorting="True"></telerik:RadDateTimePicker>
+                <telerik:RadDateTimePicker ID="RadDateTimePicker1" runat="server"  DateInput-DisplayDateFormat="dd/MM/yyyy HH:mm" TimeView-Interval="00:10:00"></telerik:RadDateTimePicker>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" ControlToValidate="RadDateTimePicker1" 
                     runat="server" ErrorMessage="โปรดกรอกข้อมูล"></asp:RequiredFieldValidator>
             </div>
@@ -66,7 +59,7 @@
 
         <div class='col-sm-2'>
             <div class="form-group">
-                <telerik:RadDateTimePicker ID="RadDateTimePicker2" runat="server" DateInput-DisplayDateFormat="dd/MM/yyyy HH:mm:ss"></telerik:RadDateTimePicker>
+                <telerik:RadDateTimePicker ID="RadDateTimePicker2" runat="server" DateInput-DisplayDateFormat="dd/MM/yyyy HH:mm" TimeView-Interval="00:10:00"></telerik:RadDateTimePicker>
                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="RadDateTimePicker2" runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                 <asp:CompareValidator ID="CompareValidator1" Operator="GreaterThan" ControlToValidate="RadDateTimePicker2" ControlToCompare="RadDatetimePicker1" ForeColor="Red" ErrorMessage="EndDate ต้องมากกว่า StartDate" runat="server"></asp:CompareValidator>
             </div>

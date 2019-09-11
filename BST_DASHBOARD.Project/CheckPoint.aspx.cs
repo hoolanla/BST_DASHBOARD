@@ -13,6 +13,7 @@ namespace BST_DASHBOARD.Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
 
             if (Session["Admin"] == null)
             {
